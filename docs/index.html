@@ -1,0 +1,144 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,target-densitydpi=high-dpi,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>page-swiper</title>
+<script src="jquery.1.11.3.min.js"></script>
+<script src="../dist/pageSwiper.min.js"></script>
+<style>
+html, body{ margin:0; padding:0;color:#fff; text-align:center;}
+a{ background-color:#fff; padding:10px 30px; display:inline-block;color:#000; text-decoration:none;}
+.page-index { background-color:#7B2526;}
+.page-list  { background-color:#2A5B7A;}
+.page-detail{ background-color:#6F9270;}
+</style>
+</head>
+<body>
+    <div>
+        <div id="pageIndex" class="page page-index page-active" data-before="beforeIndex" data-after="afterIndex">
+            <br>首页<br><br>
+            <p>xxxxx</p>
+            <p>xxxxx</p>
+            <p>xxxxx</p>
+            <a id="btnToList" href="#pageList__right">去列表页</a><br><br>
+            <a href="#pageList__left">left</a><br><br>
+            <a href="#pageList__top">top</a><br><br>
+            <a href="#pageList__bottom">bottom</a><br><br>
+            <p>xxxxx</p>
+            <p>xxxxx</p>
+            <p>xxxxx</p>
+            <p>xxxxx</p>
+            <p>xxxxx</p>
+            <p>xxxxx</p>
+            <p>xxxxx</p>
+            <p>xxxxx</p>
+            <p>xxxxx</p>
+            <p>xxxxx</p>
+            <p>xxxxx</p>
+            <p>xxxxx</p>
+            <p>xxxxx</p>
+            <p>xxxxx</p>
+            <p>xxxxx</p>
+            <p>xxxxx</p>
+            <p>xxxxx</p>
+            <p>xxxxx</p>
+            <p>xxxxx</p>
+            <p>xxxxx</p>
+            <p>xxxxx</p>
+            <p>xxxxx</p>
+            <p>xxxxx</p>
+            <p>xxxxx</p>
+            <p>xxxxx</p>
+            <p>xxxxx</p>
+            <p>xxxxx</p>
+            <p>xxxxx</p>
+            
+        </div>
+        
+        <div id="pageList" class="page page-list" data-before="beforeList" data-after="afterList">
+            <br>列表页<br><br>
+            <a id="btnBackIndex" href="#">回首页</a>
+            <a id="btnToDetail" href="#pageDetail__fade">去详细页</a>
+        </div>
+        
+        <div id="pageDetail" class="page page-detail page-detail-mask" data-callback="fn.initDetail">
+            <br>详细页<br><br>
+            <p>xxxxx</p>
+            <p>xxxxx</p>
+            <p>xxxxx</p>
+            <p>xxxxx</p>
+            <p>xxxxx</p>
+            <p>xxxxx</p>
+            <p>xxxxx</p>
+            <a id="btnBackList" href="#">回列表页</a>
+        </div>
+    </div>
+    <!--<div id="pageSwiper" class="page-swiper">
+        <div id="pageIndex" class="page page-index page-current page-active" data-before="beforeIndex" data-after="afterIndex">
+            <br>首页<br><br>
+            <a id="btnToList" href="#pageList__right">去列表页</a>
+        </div>
+        
+        <div id="pageList" class="page page-list" data-before="beforeList" data-after="afterList">
+            <br>列表页<br><br>
+            <a id="btnBackIndex" href="#pageIndex__left">回首页</a>
+            <a id="btnToDetail" href="#pageDetail__bottom">去详细页</a>
+        </div>
+        
+        <div id="pageDetail" class="page page-detail page-detail-mask" data-callback="fn.initDetail">
+            <br>详细页<br><br>
+            <a id="btnBackList" href="#pageList__top">回列表页</a>
+        </div>
+    </div>-->
+<script>
+window.onload = function(){
+	
+	//console.log('b');
+	//pageSwiper.to('#pageList');
+	var btnToList    = document.getElementById('btnToList');
+	var btnBackIndex = document.getElementById('btnBackIndex');
+	var btnToDetail  = document.getElementById('btnToDetail');
+	var btnBackList  = document.getElementById('btnBackList');
+	
+	
+	btnToList.onclick = function(){
+		//pageSwiper.to('#pageList', {position:'right'});
+	}
+	btnBackIndex.onclick = function(){
+		pageSwiper.to('#pageIndex', {position:'left'});
+	}
+	btnToDetail.onclick = function(){
+		//pageSwiper.to('#pageDetail', {position:'bottom'});
+	}
+	btnBackList.onclick = function(){
+		pageSwiper.to('#pageList', {position:'top'});
+	}
+	/**/
+}
+
+
+function beforeIndex(page){
+	console.log('beforeIndex');
+	//console.log(page);
+}
+
+function afterIndex(page){
+	//console.log('afterIndex');
+	//console.log(page);
+}
+
+function beforeList(page){
+	//console.log('beforeList');
+	//console.log(page);
+}
+
+function afterList(page){
+	//console.log('afterList');
+	//console.log(page);
+}
+
+
+</script>
+</body>
+</html>
