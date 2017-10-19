@@ -4,7 +4,7 @@
   "description": "",
   "repository": {
     "type": "git",
-    "url": "https://github.com/awin8516/page-swiper-3.0.0"
+    "url": "https://github.com/awin8516/pageSwiper"
   },
   "main": "src/pageSwiper.js",
   "dependencies": {
